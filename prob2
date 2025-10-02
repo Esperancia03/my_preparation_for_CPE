@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+// they ask to write a program to read in char in display as num
+
+int main(){
+
+ char A;
+ int b = 'A';
+ cin>> ;
+ cout << b << endl;
+ cout << A;
+
+}
