@@ -1,0 +1,17 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+double dis;
+int time;
+double velocity;
+
+cin >> dis >> time;
+
+velocity = dis/time;
+
+cout << fixed <<setprecision(6) << velocity;
+
+}
