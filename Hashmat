@@ -1,0 +1,16 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+
+long long army, opponent;
+
+while(cin >> army >> opponent)
+{
+cout << abs(army-opponent);
+
+}
+return 0;
+}
