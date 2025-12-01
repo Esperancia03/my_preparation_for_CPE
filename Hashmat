@@ -9,7 +9,7 @@ long long army, opponent;
 
 while(cin >> army >> opponent)
 {
-cout << abs(army-opponent);
+cout << army-opponent << endl;
 
 }
 return 0;
