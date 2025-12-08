@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int test, relatives, s[500];
+  cin>>test;
+
+  for(int i=0; i<test; i++)
+  {
+    cin>>relatives;
+
+    for(int j; j<relatives; j++)
+    {
+      cin>>s[j];
+    }
+      sort(s, s+relatives);
+    int median = s[relatives/2];
+
+    int total=0;
+    for(int j=0; j<relatives; j++)
+    {
+      total+=abs(s[j]-median);
+    }
+      cout<<total;
+  }
+}
