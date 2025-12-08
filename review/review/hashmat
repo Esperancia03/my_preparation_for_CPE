@@ -7,7 +7,7 @@ long long soldiers, opponents;
 
 while(cin >> soldiers >> opponents)
 {
-int difference= abs(soldiers - opponents);
+long long difference= abs(soldiers - opponents);
 cout << difference <<endl;
 }
 }
