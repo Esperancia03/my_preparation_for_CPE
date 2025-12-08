@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+long long soldiers, opponents;
+
+while(cin >> soldiers >> opponents)
+{
+int difference= abs(soldiers - opponents);
+cout << difference <<endl;
+}
+}
