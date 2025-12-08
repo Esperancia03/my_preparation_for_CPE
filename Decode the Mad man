@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<map>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+   string key ="1234567890-= qwertyuiop[]\\ asdfghjkl;' zxcvbnm,./";
+   string line;
+   
+   // read the line
+   while(getline(cin, line))
+   {
+       for(char c :line)
+       {
+           if(c == ' '){
+               cout << ' ';
+               continue;
+           }
+           
+           //find character in keyboard
+           size_t pos=key.find(tolower(c));
+           
+           if(pos != string::npos){
+               cout<<key[pos-2];
+           }
+           
+           
+           
+       }
+       cout << endl;
+   }
+    
+}
