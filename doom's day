@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+int main()
+{
+   int t;
+   cin>>t;
+   
+   vector<int> doomsday ={0, 10, 21, 14, 4,9, 6,11,8,5,10,7,12};
+   
+   vector<string> weekday = {"Monday", "Tuesday", "Wednesday", "Thursday",
+                              "Friday", "Saturday", "Sunday"};
+                              
+            while(t--)
+            {
+                int m, d;
+                cin>> m >> d;
+                
+                int diff= d-doomsday[m];
+                
+                int day_index = (0+diff)%7;
+                if(day_index <0) day_index +=7;
+                
+                cout<< weekday[day_index]<<endl;
+            }
+            return 0;
+                              
+}
