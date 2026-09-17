@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int what_is_your_age()
+{
+int age{};
+cin >> age;
+return age;
+}
+
+int main()
+{
+int n{what_is_your_age()};
+cout << n;
+}
