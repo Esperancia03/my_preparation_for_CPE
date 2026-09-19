@@ -1,0 +1,99 @@
+/*
+if(x > y)
+max =x;
+else
+max=y;
+
+other way
+
+max= ((x > y) ? x : y);
+*/
+
+/*
+#include <iostream>
+using namespace std;
+
+int get_value()
+{
+    cout << "Enter a value ";
+    int value{};
+    cin >> value;
+    return value;
+}
+
+int main()
+{
+    int x{get_value()};
+    int y{get_value()};
+    int max { (x > y) ? x : y};
+    cout << "The maximum value is: " << max << '\n';
+}
+*/
+
+
+/* 2- The conditional operator evalutes as part of an expression
+
+
+# include <iostream>
+using namespace std;
+
+int get_value()
+{
+   cout << "Enter a number: ";
+   int value{};
+   cin >> value;
+   return value;
+
+}
+
+int main()
+{
+    int x{get_value()};
+    int y{get_value()};
+    constexpr bool in_big_classroom{true};
+    int class_size { in_big_classroom ? x : y };
+    cout << class_size << '\n';
+}
+*/
+
+
+/* 3- the conditional i-else operator 
+
+#include <iostream>
+using namespace std;
+
+int class_size(bool in_big_classroom, int x, int y)
+{
+     if(in_big_classroom)
+     {
+        return x;
+     }
+     else
+     {
+        return y;
+     }
+
+}
+
+int main()
+{
+    int x, y;
+    cin >> x >> y;
+    const int class_size1{class_size(false, x, y)};
+    cout << class_size1 << '\n';
+}
+*/
+
+/*  4- the conditional operator and associativity
+#include <iostream>
+
+int main()
+{
+    int x { 2 };
+    int y { 1 };
+    int z { 10 - x > y ? x : y };
+    std::cout << z;
+
+    return 0;
+}
+    */
