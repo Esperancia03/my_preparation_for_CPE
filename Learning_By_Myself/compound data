@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n1{};
+    int den1{};
+
+    int n2{};
+    int den2;
+
+    char ignore{};
+    cin >> n1 >> ignore >> den1;
+    cin >> n2 >> ignore >> den2;
+
+    // let's multiply the fractions
+
+    cout << (n1 * n2) <<"/" << (den1 * den2) << '\n';
+
+
+}
