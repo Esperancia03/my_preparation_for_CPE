@@ -1,0 +1,33 @@
+/*
+#include <iostream>
+#include <vector>
+
+int main()
+{
+    std::vector<int> prime{ 2, 3, 5, 7, 11 };
+
+    std::cout << prime[3] << '\n';     // okay: 3 converted from int to std::size_t, not a narrowing conversion
+
+    constexpr int index { 3 };         // constexpr
+    std::cout << prime[index] << '\n'; // okay: constexpr index implicitly converted to std::size_t, not a narrowing conversion
+
+    return 0;
+}
+
+*/
+
+#include <iostream>
+#include<vector>
+using namespace std;
+
+
+int main()
+{
+    vector<char> letters{'h', 'e', 'l', 'l', 'o'}; 
+
+    cout << "The array has "
+ << letters.size() << "elements." << '\n';
+     cout << letters[1] <<letters.at(1) << '\n';
+
+     return 0;
+}
