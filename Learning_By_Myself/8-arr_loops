@@ -1,0 +1,35 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+template <typename T>
+
+//let's calculate the averafe of the given values
+T calculate_average(const vector<T>& arr)
+{
+ size_t length(arr.size());
+
+ T average {0};
+ for(size_t i=0; i<length; ++i)
+ {
+    average += arr[i];
+    
+ }
+ average /= static_cast<int> (length);
+
+ return average;
+}
+
+int main()
+{
+  vector<int> arr(5);
+    for(size_t i=0; i<arr.size(); ++i)
+    {
+        cin >> arr[i];
+
+    }
+    cout << "The class average is: "<< calculate_average(arr) << '\n';
+
+}
+
