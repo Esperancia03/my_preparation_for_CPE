@@ -1,10 +1,13 @@
 #include<iostream>
-
+#include<algorithm>
+#include<cstdlib>
+#include<vector>
 using namespace std;
 
 int main()
 {
-   int test_case, int relatives, street[500];
+   int test_case, int relatives;
+vector<int> streets{500};
 
    cin >> test_case;
 
@@ -17,11 +20,18 @@ for(int i=0; i<=test_case; i++)
     for(int j=0; j<=relatives; j++)
       {
         cin >> street[j];
-
-       int distance= abs(street[j]- street[j++])
        
       }
-          
+      sort(street.begin(), street.end());
+
+         // now let's find the median
+      int med = street[relatives/2];
+
+         for(int j=0; j<=relative; i++)
+      {
+        int distance= abs(street[j]-med);
+      }
+       cout << distance << '\n';   
 
 }
 
