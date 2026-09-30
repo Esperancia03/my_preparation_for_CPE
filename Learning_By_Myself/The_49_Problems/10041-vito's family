@@ -6,30 +6,29 @@ using namespace std;
 
 int main()
 {
-   int test_case, int relatives;
-vector<int> streets{500};
+   int test_case, relatives;
 
    cin >> test_case;
 
-for(int i=0; i<=test_case; i++)
+for(int i=0; i< test_case; i++)
 {
     cin >> relatives;
-
+    vector<int> streets(relatives);
       //now that we have the input of the number of relatives now let's display their relative street
 
-    for(int j=0; j<=relatives; j++)
+    for(int j=0; j< relatives; j++)
       {
-        cin >> street[j];
+        cin >> streets[j];
        
       }
-      sort(street.begin(), street.end());
+      sort(streets.begin(), streets.end());
 
          // now let's find the median
-      int med = street[relatives/2];
-
-         for(int j=0; j<=relative; i++)
+      int med = streets[relatives/2];
+      int distance=0;
+         for(int j=0; j< relatives; j++)
       {
-        int distance= abs(street[j]-med);
+         distance += abs(streets[j]-med);
       }
        cout << distance << '\n';   
 
