@@ -4,5 +4,26 @@ using namespace std;
 
 int main()
 {
+   int test_case, int relatives, street[500];
+
+   cin >> test_case;
+
+for(int i=0; i<=test_case; i++)
+{
+    cin >> relatives;
+
+      //now that we have the input of the number of relatives now let's display their relative street
+
+    for(int j=0; j<=relatives; j++)
+      {
+        cin >> street[j];
+
+       int distance= abs(street[j]- street[j++])
+       
+      }
+          
+
+}
+
 
 }
