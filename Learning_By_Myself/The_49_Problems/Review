@@ -1,0 +1,35 @@
+//1- vito's family
+
+#include<iostream>
+#include<vector>
+#include<cstdlib>
+#include<algorithm>
+using namespace std;
+
+
+int main()
+{
+int tests, relatives;
+cin >> tests;
+
+for(int i=0; i<tests; i++)
+{
+    cin >> relatives;
+  vector<int> street(relatives);
+   for(int j=0; j<relatives; j++)
+{
+     cin >> street[j];
+}
+     sort(street.begin(), street.end());
+     int median = street[relatives/2];
+     int distance=0;
+
+    for(int j=0; j<relatives; j++)
+{
+     distance += abs(street[j]- median);
+}
+      cout << distance << '\n';
+
+}
+return 0;
+}
