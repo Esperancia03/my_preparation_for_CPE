@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
+
+    // Add your code here
+    for(int& num: arr)
+    {
+        cout << num << " ";
+    }
+
+    return 0;
+}
