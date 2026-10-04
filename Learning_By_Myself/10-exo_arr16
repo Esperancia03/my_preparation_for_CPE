@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Implement printArray() here
+vector<int> printArray( vector<int>& arr)
+{
+    for(int& num: arr)
+    {
+        cout << num << " ";
+    }
+    return arr;
+
+}
+int main()
+{
+    vector<int> arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
+
+    printArray(arr); // use function template to print array
+
+    return 0;
+}
