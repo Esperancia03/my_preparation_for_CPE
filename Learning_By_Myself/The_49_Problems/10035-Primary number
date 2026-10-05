@@ -1,1 +1,43 @@
+#include <iostream>
 
+using namespace std;
+
+
+int main()
+{
+int a, b;
+
+while(cin>>a>>b)
+{
+if(a==0 & b==0)break;
+int carry=0, count=0;
+
+while(a>0||b>0)
+{
+int digitA= a%10;
+int digitB=b%10
+if(digitA+digitB >=10)
+{
+carry =1;
+count++;
+}
+else
+{
+carry=0;
+}
+
+}
+if(count==0)
+{
+cout << "No carry operation" << '\n';
+}
+else if(count==1)
+{
+cout << "1 carry operation" << '\n';
+}
+else
+{cout << cout << "carry operations";
+}
+}
+return 0;
+}
