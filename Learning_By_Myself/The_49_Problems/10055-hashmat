@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+long long hashmat, opponent;
+long long diff=0;
+while(cin >> hashmat >> opponent)
+{
+    if(opponent>hashmat)
+    
+    {
+  diff = opponent - hashmat;
+  cout << diff << '\n';
+    }
+    else{
+        diff =  hashmat- opponent;
+  cout << diff << '\n';
+    }
+
+}
+
+
+}
