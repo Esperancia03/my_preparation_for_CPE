@@ -1,16 +1,35 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 
 int main()
 {
-int n;
+string n;
 while(cin>>n)
 {
-if(n==0)break;
-else if(n%11==0)
+if(n== "0")break;
+int even_pos = 0;
+int odd_pos =0;
+
+
+for(int i=0; i<n.size(); i++)
 {
-cout << n << " is a multiple of 11." << '\n';
+ind digit = n[i] - '0';
+if(i%2==0)
+{
+odd_pos += digit;
+}
+else
+{
+even_pos += digit;
+}
+}
+int diff= abs(even_pos - odd_pos);
+
+if(diff%11==0)
+{
+ cout << n << " is a multiple of 11." << '\n';
 }
 else
 {
