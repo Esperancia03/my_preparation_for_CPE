@@ -1,0 +1,43 @@
+//print reverse
+
+/*#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    vector<int> arr(8);
+    for(int& num: arr)
+    {
+        cin >> num;
+    }
+
+    reverse(arr.begin(), arr.end());
+     for(int& num: arr)
+     {
+        cout << num << " ";
+     }
+}*/
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+template<typename T>
+
+void printRev(const vector<T>& arr)
+{
+    for(size_t i{arr.size()-1}; i< arr.size(); --i)
+    {
+        cout << arr[i]<< " ";
+    }
+}
+
+int main()
+{
+    vector<int> arr{4, 6, 7, 3, 8, 2, 1, 9};
+    printRev(arr);
+}
+
