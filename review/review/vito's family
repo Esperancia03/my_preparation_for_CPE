@@ -1,0 +1,31 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+int test_cases, relatives;
+  cin >> test_cases;
+  
+  for(int i=0; i< test_cases; i++)
+  {
+    cin >> relatives;
+    vector<int> streets[relatives];
+
+
+    for(int j=0; j < relatives; j++)
+    {
+      cin << streets[j];
+    }
+      sort(streets.begin(), streets.end());
+
+    int median = streets[relatives/2];
+    int difference = 0;
+    for (int j=0; j< relatives; i++)
+    {
+      differance += abs(streets[j] - median);
+    }
+      
+  }
+      cout << diff << '\n';
+}
