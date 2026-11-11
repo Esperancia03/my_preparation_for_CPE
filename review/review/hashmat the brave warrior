@@ -1,0 +1,19 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+
+int main()
+{
+ long long opponent, soldier;  
+ long long diff=0;
+  while(cin >> opponent >> soldier)
+    {
+       diff= abs(opponent - soldier);
+       cout << diff << '\n';
+     
+    }
+        
+
+  
+}
