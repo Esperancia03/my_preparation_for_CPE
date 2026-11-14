@@ -1,0 +1,49 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int cycle_length(int n)
+{
+ int count=1;
+while(n !=1)
+{
+ count++;
+  if(n % 2==0)
+  {
+   n /=2;
+  }
+  else{
+  n = 3 * n +1;
+  }
+ }
+  return count;
+
+}
+
+int main()
+{
+int i, j;
+
+while(cin >> i >> j)
+{
+cout << i << " " << j << " ";
+
+// between the two numbers we should start with the smallest
+if(i>j) // then we need to swap
+ {
+  swap{i , j};
+ }
+
+ // so what we are looking for is the maximum lenght sobetween these two numbers ex 10 to 1 after the calcul for each number in between plus 1 and 10 which oe give the max cycle length
+
+ int max_cycle=0;
+ for(int n = i ; n<=j; n++)
+ {
+   int cycle = cycle_length(n);
+   max_cycle = max(cycle, max_cycle);
+ }
+
+ cout << max_cycle << '\n';
+}
+
+}
