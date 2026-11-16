@@ -1,0 +1,60 @@
+#include<iostream>
+
+using namespace std;
+
+void Bangla(long long n)
+{
+
+  if(n >= 10000000)
+  {
+   Bangla(n /10000000)
+   cout << " kuti";
+   n %=10000000;
+  }
+   if(n >= 100000)
+  {
+   Bangla(n /100000)
+   cout << " lakh";
+   n %=100000;
+  }
+  if(n >= 1000)
+  {
+   Bangla(n /1000)
+   cout << " lakh";
+   n %=1000;
+  }
+  if(n >= 1000)
+  {
+   Bangla(n /100)
+   cout << " shata";
+   n %=100;
+  }
+  if(n > 0)
+  {
+  cout << " " << n;
+  }
+  
+
+}
+
+int main()
+{
+ long long n;
+ int case_No =1;
+   while(cin >> n)
+   {
+     //output a line starting with the case number with four digits
+     cout << stew(4) << case_No <<".";
+
+     if(n==0)
+     {
+      cout << " 0" << '\n';
+     }
+     else{
+        Bangla(a);
+        cout << '\n';
+        
+     }
+     case_No++;
+   }
+}
