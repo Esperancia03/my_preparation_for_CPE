@@ -31,7 +31,7 @@ cout << i << " " << j << " ";
 // between the two numbers we should start with the smallest
 if(i>j) // then we need to swap
  {
-  swap{i , j};
+  swap(i , j);
  }
 
  // so what we are looking for is the maximum lenght sobetween these two numbers ex 10 to 1 after the calcul for each number in between plus 1 and 10 which oe give the max cycle length
