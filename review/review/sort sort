@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+
+int main()
+{
+//You will be given N numbers and a positive integer M
+  int N , M;
+while( cin >> N >> M){
+
+ if(N==0 && M==0){ cout << "0 0"; } break;
+ 
+ vector<int> numbers(N);
+ 
+  // we need to sort the n numbers in ascending order after finding the remaing of their modulo M
+
+  for(int i=0; i<N.size(); i++)
+  {
+   cin >> numbers[i];
+   }
+   
+   if(numbers[i] % M ==0)
+   
+   }
+   
+  }
+  }
+}
