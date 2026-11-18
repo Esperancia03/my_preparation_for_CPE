@@ -1,28 +1,26 @@
 #include<iostream>
-
+#include<cstdlib>
 using namespace std;
 
 
 // we need long long because 0 ≤ each_integer ≤ 100000
-long long Num_Steps_before(long long x, long long y)
+long long Steps(long long x, long long y)
 {
   long long n = x +y;
-  return (n *(n+1))/2 +x;
+  return n * (n+1)/2 +x;
 }
 
 int main()
 {
 int tests;
-int case_No=0;
 cin >> tests;
  for(int i=1; i<= tests; i++)
  {
- case_No++;
    long long x1, x2, y1, y2;
    cin >> x1 >> y1 >> x2 >> y2;
    
-   long long distance = Num_Steps_before(x2, y2) - Num_Steps_before(x1, y1);
-    cout << "Case " << case_No << ": " << distance << '\n';
+   long long distance = abs(Steps(x2, y2) - Steps(x1, y1));
+    cout << "Case " << i << ": " << distance << '\n';
 
  }
  
