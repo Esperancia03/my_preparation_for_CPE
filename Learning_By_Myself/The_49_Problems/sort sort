@@ -1,0 +1,53 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+
+int main()
+{
+//You will be given N numbers and a positive integer M
+  int N , M;
+while( cin >> N >> M){
+
+ if(N==0 && M==0){ cout << "0 0"; } break;
+ 
+ vector<int> numbers(N);
+ 
+  // we need to sort the n numbers in ascending order after finding the remaing of their modulo M
+
+  for(int i=0; i<N; i++)
+  {
+   cin >> numbers[i];
+   }
+   //You will have to sort the N numbers in ascending order of their modulo M value.
+  // we will need to use the lambda function
+
+  sort(numbers.begin(), numbers.end(), [M](int a, int b)
+
+  //follow the priority of the rules in the problem statement
+
+  int x = a % M;
+  int y = b % M;
+
+  if(x != y)
+  {
+   return x < y;
+  }
+  //If there is a tie between an odd number and an even number (that is their modulo M value is the same) then the odd
+number will precede the even number.
+  if(a % 2 !=0 && b %2 ==0) return true;
+  if(a % 2 ==0 && b %2 !=0) return false;
+
+  //f there is a tie between two odd numbers  then the larger odd number will precede the smaller odd number
+  if(a % 2 !=0 && b% 2 != 0) return a>b;
+
+  //if there is a tie between two even numbers then the smaller evennumber will precede the larger even number or if neither condition applies
+   return a<b;
+  
+  );
+   
+   
+   
+  }
+  }
