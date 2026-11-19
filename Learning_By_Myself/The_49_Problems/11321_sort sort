@@ -11,9 +11,10 @@ int main()
   int N , M;
 while( cin >> N >> M){
 
- if(N==0 && M==0){ cout << "0 0"; 
-break;
-}
+ if(N==0 && M==0){ cout << "0 0" << '\n';  
+    break;
+} 
+
  
  vector<int> numbers(N);
  
@@ -26,19 +27,18 @@ break;
    //You will have to sort the N numbers in ascending order of their modulo M value.
   // we will need to use the lambda function
 
-  sort(numbers.begin(), numbers.end(), [M](int a, int b) {
+  sort(numbers.begin(), numbers.end(), [M](int a, int b){
 
   //follow the priority of the rules in the problem statement
 
   int x = a % M;
   int y = b % M;
-
+ // smaller remainder first
   if(x != y)
   {
    return x < y;
   }
-  //If there is a tie between an odd number and an even number (that is their modulo M value is the same) then the odd
-number will precede the even number.
+  //If there is a tie between an odd number and an even number (that is their modulo M value is the same) then the odd number will precede the even number.
   if(a % 2 !=0 && b %2 ==0) return true;
   if(a % 2 ==0 && b %2 !=0) return false;
 
@@ -47,15 +47,14 @@ number will precede the even number.
 
   //if there is a tie between two even numbers then the smaller evennumber will precede the larger even number or if neither condition applies
    return a<b;
-  
-  });
-
+} 
+  );
+   
    cout << N << " " << M << '\n';
-   for(int i=0; i< N; i++)
-{
-    cout << numbers[i] << '\n';
-}
-
+    for(int i =0; i<N; i++)
+    {
+        cout << numbers[i] << '\n';
+    }
    
   }
   }
