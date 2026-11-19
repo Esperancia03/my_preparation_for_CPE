@@ -1,9 +1,32 @@
-#include<iostream>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
 int main()
-
 {
+    vector<string> lines;
+    string line;
+    size_t max_length = 0;
 
+    while (getline(cin, line))
+    {
+        
+        lines.push_back(line);
+        if (line.size() > max_length)
+            max_length = line.size();
+    }
 
-}nnnnnnnnnn
+    for (size_t col = 0; col < max_length; col++)
+    {
+        for (int row = (int)lines.size() - 1; row >= 0; row--)
+        {
+            if (col < lines[row].size())
+                cout << lines[row][col];
+            else
+                cout << ' ';
+        }
+        cout << '\n';
+    }
+    return 0;
+}
