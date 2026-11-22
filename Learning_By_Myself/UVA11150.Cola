@@ -1,0 +1,23 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+  int N;
+while(cin >> N)
+{
+  int totalBottle = N;
+  int empty = N;
+   while(empty >=3)
+   {
+       int new_full_bottle = empty/3;
+       totalBottle +=new_full_bottle;
+      empty = empty %3 + new_full_bottle; // we find the remaining empty bottle then sic we empty the new ones so we have to had the new bottles to the empty ones
+
+   }
+   if(empty ==2){totalBottle++;}
+cout << totalBottle << '\n';
+}
+
+}
