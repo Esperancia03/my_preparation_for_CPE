@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+ int n;
+cin >> n;
+for(int i=0; i<n; i++)
+{
+  int s, d, x, y;
+
+ cin >> s >> d;
+
+  //considering x has the largest score and y the smallest
+   x = (s +d) /2;
+   y = (s-d) /2;
+
+ if(x + y ==s && x-y ==d && x>=0 && y>=0)
+ {
+    cout << x << " "<< y << '\n';
+ }
+ else{
+    cout << "impossible" << '\n';
+ }
+
+}
+}
