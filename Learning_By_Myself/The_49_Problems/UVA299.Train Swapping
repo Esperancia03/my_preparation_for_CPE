@@ -1,1 +1,32 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
 
+int main()
+{
+  int test, total_car;
+ cin >> test;
+
+for(int i=0; i< test; i++)
+{
+ cin >> total_car;
+int count =0;
+vector<int> carriages(total_car);
+for(int i = 0; i< total_car; i++)
+{
+  cin >> carriages[i];
+}
+
+//j counts the number of Bubble Sort passes (rounds) and determines how many comparisons remain in each pass.
+for(int j=0; j < total_car - 1; j++){
+for (int k =0; k< total_car - 1 -j; k++ ){
+if(carriages[k] > carriages[k+1]){ swap(carriages[k], carriages[k+ 1]);
+count++;
+}
+}
+}
+
+cout << "Optimal train swapping takes " << count <<" swaps." << '\n';
+}
+}
