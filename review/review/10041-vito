@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int relatives; test_cases;
+cin >> test_cases;
+
+for(int i<0; i< test_cases; i++)
+{
+cin >> relatives
+vector<int> streets[relatives];
+ for(int j=0; j< relatives; j++)
+ {
+   cin >> streets[j];
+ }
+ // sort 
+ sort(streets.begin(), streets.end())
+
+ //find the median
+ int med = streets[relatives/2];
+ int dis=0;
+for(int j=0; j< relatives; j++)
+{
+ dis += abs(streets[j] - med);
+}
+cout << dis << endl;
+ 
+
+}
+
+}
